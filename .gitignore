@@ -1,0 +1,25 @@
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# dotenv environment variables file
+.env
+
+# System Files
+.DS_Store
+Thumbs.db
+

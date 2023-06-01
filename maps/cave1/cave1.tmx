@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="20" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="8">
+ <editorsettings>
+  <export target="../../cave1.js" format="js"/>
+ </editorsettings>
+ <tileset firstgid="1" name="mainlev_build" tilewidth="32" tileheight="32" tilecount="1024" columns="32">
+  <image source="../resources/tilesets/mainlev_build.png" trans="000000" width="1024" height="1024"/>
+ </tileset>
+ <tileset firstgid="1025" name="CastleTiles" tilewidth="32" tileheight="32" tilecount="56" columns="8" objectalignment="topleft">
+  <image source="../resources/tilesets/CastleTiles.png" trans="000000" width="256" height="224"/>
+ </tileset>
+ <tileset firstgid="1081" name="lab-tileset" tilewidth="32" tileheight="32" tilecount="81" columns="9">
+  <image source="../resources/tilesets/lab-tileset.png" trans="000000" width="300" height="300"/>
+ </tileset>
+ <tileset firstgid="1162" name="ExtraTiles1" tilewidth="32" tileheight="32" tilecount="56" columns="8">
+  <image source="../resources/tilesets/ExtraTiles1.png" trans="000000" width="256" height="224"/>
+ </tileset>
+ <tileset firstgid="1218" name="dirt" tilewidth="32" tileheight="32" tilecount="220" columns="20">
+  <image source="../resources/tilesets/backgrounds/1Tiles.png" trans="000000" width="640" height="360"/>
+ </tileset>
+ <tileset firstgid="1438" name="dirt2" tilewidth="32" tileheight="32" tilecount="220" columns="20">
+  <image source="../resources/tilesets/backgrounds/4Ground.png" trans="000000" width="640" height="360"/>
+ </tileset>
+ <tileset firstgid="1658" name="pointers" tilewidth="32" tileheight="32" tilecount="8" columns="4" objectalignment="topleft">
+  <image source="../resources/tilesets/items/pointers.png" trans="000000" width="128" height="64"/>
+ </tileset>
+ <tileset firstgid="1666" name="crystals" tilewidth="32" tileheight="32" tilecount="15" columns="5" objectalignment="topleft">
+  <image source="../resources/tilesets/items/crystals.png" trans="000000" width="160" height="96"/>
+ </tileset>
+ <tileset firstgid="1681" name="gljive" tilewidth="32" tileheight="32" tilecount="24" columns="8" objectalignment="topleft">
+  <image source="../resources/tilesets/items/gljive.png" trans="000000" width="256" height="96"/>
+ </tileset>
+ <tileset firstgid="1705" name="owlet" tilewidth="32" tileheight="32" tilecount="32" columns="8" objectalignment="topleft">
+  <image source="../resources/animated/owlet.png" trans="000000" width="256" height="128"/>
+ </tileset>
+ <tileset firstgid="1737" name="soldier" tilewidth="32" tileheight="32" tilecount="12" columns="3">
+  <image source="../resources/tilesets/characters/pipo-charachip_soldier01.png" trans="000000" width="96" height="128"/>
+ </tileset>
+ <tileset firstgid="1749" name="vial_key" tilewidth="32" tileheight="32" tilecount="2" columns="2" objectalignment="topleft">
+  <image source="../resources/tilesets/vial_key.png" trans="000000" width="64" height="32"/>
+ </tileset>
+ <layer id="1" name="background" width="20" height="10">
+  <data encoding="csv">
+744,840,744,776,744,744,745,746,744,744,744,744,744,744,776,778,744,744,744,745,
+776,841,842,776,776,744,777,746,776,776,744,776,840,776,776,776,841,744,745,746,
+744,745,746,746,745,746,746,744,776,840,776,744,776,777,778,778,746,744,745,746,
+776,777,778,745,777,746,744,776,776,777,744,745,746,776,842,778,778,744,745,746,
+745,746,776,778,778,744,776,776,842,778,744,745,746,778,776,744,745,746,746,746,
+744,744,744,744,840,745,776,840,744,745,744,744,744,744,745,744,744,744,744,744,
+840,776,841,776,744,744,776,777,776,744,776,745,745,776,744,776,776,776,776,776,
+744,744,744,744,776,776,776,777,776,776,776,777,776,776,776,776,777,778,0,0,
+744,744,744,744,744,744,744,744,744,744,744,744,744,744,744,744,744,744,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="background2" width="20" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,777,0,0,0,0,0,0,0,0,
+0,0,0,0,684,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,844,0,0,0,715,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,844,0,0,0,0,0,0,0,
+0,0,0,0,0,0,712,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1578,1579,1580,1581,1582,1583,681,748,1586,1587,1588,1589,1590,1591,1592,1593,1594,1595,1596,1597,
+1598,1599,1600,1601,1602,1603,683,680,1606,1607,1608,1609,1610,1611,1612,1613,1614,1615,1616,1617,
+1618,1619,1620,1621,1622,1623,1624,1625,1626,1627,1628,1629,1630,1631,1632,1633,1634,1635,1636,1637,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="3" name="platforms" width="20" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1060,1061,1062,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,1060,1061,1061,1062,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,1053,0,0,0,0,0,0,0,0,0,
+1398,1399,1400,1401,1402,1403,1404,1405,1406,1407,1408,1409,1410,1411,1412,1413,1414,1415,1416,1417,
+1418,1419,1420,1421,1422,1423,1424,1425,1426,1427,1428,1429,1430,1431,1432,1433,1434,1435,1436,1437
+</data>
+ </layer>
+ <layer id="5" name="decoration" width="20" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,1048,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,1048,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,1048,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,1054,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1070,1071,
+0,1075,0,0,1162,0,0,0,0,0,0,0,0,0,0,0,0,1069,1071,1071,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="7" name="items">
+  <properties>
+   <property name="class" value="items"/>
+  </properties>
+  <object id="1" name="sw" gid="1031" x="540.666" y="64" width="32" height="32"/>
+  <object id="2" name="p1" gid="1661" x="588.667" y="208" width="43.6667" height="51"/>
+  <object id="3" name="c1" gid="1676" x="461.92" y="122.167" width="21.7287" height="21.3317" rotation="22.1126"/>
+  <object id="6" name="g1" gid="1687" x="248.364" y="224" width="32" height="32">
+   <properties>
+    <property name="class" value="items"/>
+   </properties>
+  </object>
+  <object id="7" name="keyIcon" gid="1750" x="0.363636" y="0.363636" width="32" height="32"/>
+ </objectgroup>
+ <layer id="8" name="enemy" width="20" height="10">
+  <properties>
+   <property name="class" value="enemy"/>
+  </properties>
+  <data encoding="csv">
+1740,1741,1742,1743,1744,1745,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="6" name="owlet" width="20" height="10">
+  <properties>
+   <property name="class" value="owlet"/>
+  </properties>
+  <data encoding="csv">
+1705,1706,1707,1708,1709,1710,1711,1712,0,0,0,0,0,0,0,0,0,0,0,0,
+1713,1714,1715,1716,1717,1718,1721,1722,1723,1724,1725,1726,0,0,0,0,0,0,0,0,
+1729,1730,1731,1732,1733,1734,1735,1736,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

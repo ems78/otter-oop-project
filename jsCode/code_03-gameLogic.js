@@ -212,6 +212,10 @@ function handleAttackOnEnemy() {
 }
 
 
+/**
+ * Upravlja otključavanjem pointera
+ * @returns boolean
+ */
 function handleUnlockingDoor() {
   if (Postavke.keyIcon) return true;
   return false;
@@ -235,14 +239,6 @@ function handlePointerInteraction(pointer) {
     setup();
   }
 };
-
-
-function handleGameOver() {
-  if (GAME.activeWorldMap.name === "hills") {
-    Postavke.gameOver();
-    return true;
-  } return false;
-}
 
 
 /**
@@ -286,3 +282,13 @@ function handleFpReplenishment() {
 };
 
 
+/**
+ * Upravlja završetkom igre
+ * @returns boolean
+ */
+function handleGameOver() {
+  if (GAME.activeWorldMap.name === "hills") {
+    Postavke.gameOver();
+    return true;
+  } return false;
+}

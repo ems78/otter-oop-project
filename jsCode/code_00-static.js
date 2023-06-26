@@ -2,7 +2,7 @@
 class Postavke {
     
     constructor() {
-        throw "Klasička klasa";
+        throw "Statička klasa";
     }
 
     /** @type {KyberCrystal} */
@@ -92,7 +92,10 @@ class Postavke {
         return hp + fp + m + k + v;
     }
 
-
+    /**
+     * Provjera zadovoljenih uvjeta i ispis poruka za GAME OVER
+     * @returns 
+     */
     static gameOver() {
         btnStop_click();
         console.log("_________ GAME OVER _________");
@@ -116,7 +119,7 @@ class Postavke {
         }
     }
 
-
+    /** @type {number} */
     static goals = {
         crystals: 5,
         mushrooms: 8,

@@ -78,7 +78,7 @@ class Game {
     if (this.activeWorldMap != null) {
       if (this.activeWorldMap.sprites.length > 0) {
         // console.warn("Promijenjena je mapa, pazite na sprites koji ostaju u staroj mapi:");
-        console.log(this.activeWorldMap.sprites);
+        // console.log(this.activeWorldMap.sprites);
       }
     }
     this.activeWorldMap = this.worlds[name];

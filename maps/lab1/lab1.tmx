@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="20" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="9">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="20" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="11">
  <editorsettings>
   <export target="../../lab1.js" format="js"/>
  </editorsettings>
@@ -15,7 +15,7 @@
  <tileset firstgid="140" name="enemy" tilewidth="32" tileheight="32" tilecount="12" columns="3">
   <image source="../resources/tilesets/characters/pipo-charachip_soldier01.png" trans="000000" width="96" height="128"/>
  </tileset>
- <tileset firstgid="152" name="crystals" tilewidth="32" tileheight="32" tilecount="15" columns="5">
+ <tileset firstgid="152" name="crystals" tilewidth="32" tileheight="32" tilecount="15" columns="5" objectalignment="topleft">
   <image source="../resources/tilesets/items/crystals.png" trans="000000" width="160" height="96"/>
  </tileset>
  <tileset firstgid="167" name="owlet" tilewidth="32" tileheight="32" tilecount="32" columns="8">
@@ -62,9 +62,9 @@
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,117,119,0,
+117,118,118,0,0,0,0,0,0,0,0,0,0,0,0,0,0,117,119,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,117,118,118,118,118,118,119,0,0,0,0,
+0,0,0,0,117,118,119,0,0,117,118,118,118,118,118,119,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,119,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -77,7 +77,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,97,0,0,0,0,0,0,0,
+0,0,0,0,0,102,0,0,0,0,0,0,97,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,89,0,0,0,0,0,0,0,0,0,0,0,0,89,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -98,6 +98,8 @@
   <object id="6" name="g1" gid="271" x="446.409" y="233.705" width="22.8258" height="22.9205"/>
   <object id="7" name="keyIcon" gid="139" x="0.625" y="0.625" width="32" height="32"/>
   <object id="8" name="p1" gid="282" x="603.875" y="225" width="32" height="32"/>
+  <object id="9" name="c1" gid="156" x="32.4924" y="35.9242" width="32" height="32"/>
+  <object id="10" name="c2" gid="166" x="3.09091" y="36.6818" width="32" height="32"/>
  </objectgroup>
  <layer id="8" name="enemy" width="20" height="10">
   <properties>

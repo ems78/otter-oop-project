@@ -100,15 +100,19 @@ function setupForrest() {
   GAME.addSprite(c1);
   Postavke.kyberCrystals.push(c1);
 
-  const iP1 = new infoPointer("Press left/right arrows to move.\nPress up arrow to jump.", GAME.getSpriteLayer("info1"));
+  const iP1 = new infoPointer(`\nPress LEFT/RIGHT arrows to move.\nPress UP arrow to jump.
+  \nPress W to interact with pointers.\nSome pointers will give instructions
+  and some will load the next map.`, GAME.getSpriteLayer("info1"));
   GAME.addSprite(iP1);
   Postavke.infoPointers.push(iP1);
 
-  const iP2 = new infoPointer("Collect mushrooms and kyber crystals!", GAME.getSpriteLayer("info2"));
+  const iP2 = new infoPointer(`\nYour mission is to collect at least 8 mushrooms and 2 kyber crystals!
+  \nFind and destroy all vials!`, GAME.getSpriteLayer("info2"));
   GAME.addSprite(iP2);
   Postavke.infoPointers.push(iP2);
 
-  const iP3 = new infoPointer("Press W key to interact with pointers.\nSome will give instructions and some will load the next map.", GAME.getSpriteLayer("info3"));
+  const iP3 = new infoPointer(`\nPress SPACE to attack enemies, destroy boxes and vials.
+  \nPress and hold A to heal.`, GAME.getSpriteLayer("info3"));
   GAME.addSprite(iP3);
   Postavke.infoPointers.push(iP3);
   
@@ -131,7 +135,6 @@ function setupCaveEntrance() {
 
   const keyIcon = new Key(GAME.getSpriteLayer("keyIcon"));
   GAME.addSprite(keyIcon);
-  console.log(keyIcon);  
   Postavke.keyIcon = keyIcon;
 
 }
@@ -164,6 +167,13 @@ function setupCave1() {
 
 
 function setupLab1() {
+
+  const c1 = new KyberCrystal(GAME.getSpriteLayer("c1"));
+  const c2 = new KyberCrystal(GAME.getSpriteLayer("c2"));
+  GAME.addSprite(c1);
+  GAME.addSprite(c2);
+  Postavke.kyberCrystals.push(c1);
+  Postavke.kyberCrystals.push(c2);
 
   const v1 = new Vial(GAME.getSpriteLayer("v1"));
   const v2 = new Vial(GAME.getSpriteLayer("v2"));

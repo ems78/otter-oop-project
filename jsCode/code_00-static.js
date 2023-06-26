@@ -86,13 +86,36 @@ class Postavke {
     static ispis() {
         let hp = `HP: ${this.owlet.healthPoints}\t\t\t`;
         let fp = `FP: ${this.owlet.forcePoints}\n`;
-        let m = `Mushrooms: ${this.owlet.mushroomCount}\t\t`;
-        let k = `Crystals: ${this.owlet.crystalCount}\t\t`;
-        let v = `Vials destroyed: ${this.owlet.vialsDestroyed}/x`;
+        let m = `Mushrooms: ${this.owlet.mushroomCount}/8\t\t`;
+        let k = `Crystals: ${this.owlet.crystalCount}/5\t\t`;
+        let v = `Vials destroyed: ${this.owlet.vialsDestroyed}/5`;
         return hp + fp + m + k + v;
     }
 
 
-    // cilj igre, skupit gljive, kristale
-    // static goal = [5, 7];
+    static gameOver() {
+        btnStop_click();
+        console.log("_________ GAME OVER _________");
+        let mission = "Mission successful!";
+        if (this.owlet.vialsDestroyed != this.goals["vials"]) {
+            console.log("You didn't destroy all the vials...");
+            mission = "Mission failed";
+        }
+        if (this.owlet.crystalCount < this.goals["crystals"]) {
+            console.log("You didn't collect enough crystals...");
+            mission = "Mission failed";
+        }
+        if (this.owlet.mushroomCount < this.goals["mushrooms"]) {
+            console.log("You didn't collect enough mushrooms...");
+            mission = "Mission failed";
+        }
+        console.log(mission);
+    }
+
+
+    static goals = {
+        crystals: 5,
+        mushrooms: 8,
+        vials: 5
+    };
 }

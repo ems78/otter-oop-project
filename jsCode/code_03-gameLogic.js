@@ -225,6 +225,7 @@ function handlePointerInteraction(pointer) {
   if (!Postavke.owlet.touching(pointer)) return;
   if (!Postavke.CooldownActive("KeyW", 1000)) return;
   if (!pointer.unlock(Postavke.keyIcon)) return;
+  if (handleGameOver()) return;
 
   let nextMapName = pointer.nextMap();
   console.log(`Učitana je sljedeća mapa: ${nextMapName}`); // debugging
@@ -234,6 +235,14 @@ function handlePointerInteraction(pointer) {
     setup();
   }
 };
+
+
+function handleGameOver() {
+  if (GAME.activeWorldMap.name === "hills") {
+    Postavke.gameOver();
+    return true;
+  } return false;
+}
 
 
 /**

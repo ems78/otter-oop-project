@@ -29,6 +29,10 @@ function update_main() {
   else if (GAME.activeWorldMap.name === "lab1") {
     lab1Behaviour();  
   }
+  
+  else if (GAME.activeWorldMap.name === "lab2") {
+    lab2Behaviour();
+  }
 
   GAME.update();
 };
@@ -97,6 +101,14 @@ function lab1Behaviour() {
 
   if (SENSING.space.active) {  
     handleAttackOnEnemy();
+    handleAttackOnVial();
+  }
+}
+
+
+function lab2Behaviour() {
+
+  if (SENSING.space.active) {
     handleAttackOnVial();
   }
 }

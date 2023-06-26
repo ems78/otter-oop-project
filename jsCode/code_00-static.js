@@ -43,6 +43,7 @@ class Postavke {
         forrest: "cave_entrance",
         cave_entrance: "cave1",
         cave1: "lab1",
+        lab1: "lab2"
     };
 
     /** @type {Date} */

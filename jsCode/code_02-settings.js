@@ -51,6 +51,10 @@ function setup() {
       setupLab2();
       break;
 
+    case "hills":
+      setupHills();
+      break;
+
     default:
       throw "Ne postoji setup za " + GAME.activeWorldMap.name;
   }
@@ -209,5 +213,14 @@ function setupLab2() {
   Postavke.mushrooms.push(g1);
   Postavke.mushrooms.push(g2);
   Postavke.mushrooms.push(g3);
+
+}
+
+
+function setupHills() {
+
+  const c1 = new KyberCrystal(GAME.getSpriteLayer("c1"));
+  GAME.addSprite(c1);
+  Postavke.kyberCrystals.push(c1);
   
 }

@@ -90,14 +90,14 @@
   <properties>
    <property name="class" value="items"/>
   </properties>
-  <object id="1" name="p1" gid="200" x="553.5" y="13.6667" width="46" height="50.6667"/>
+  <object id="1" name="p2" gid="200" x="553.5" y="13.6667" width="46" height="50.6667"/>
   <object id="2" name="b1" gid="131" x="256.5" y="224.5" width="32" height="32"/>
   <object id="3" name="v3" gid="138" x="289.568" y="114.92" width="13.75" height="13.75"/>
   <object id="4" name="v2" gid="138" x="299.614" y="114.705" width="13.875" height="13.875"/>
   <object id="5" name="v1" gid="138" x="310" y="114.659" width="14" height="14"/>
   <object id="6" name="g1" gid="271" x="446.409" y="233.705" width="22.8258" height="22.9205"/>
   <object id="7" name="keyIcon" gid="139" x="0.625" y="0.625" width="32" height="32"/>
-  <object id="8" name="p2" gid="282" x="603.875" y="225" width="32" height="32"/>
+  <object id="8" name="p1" gid="282" x="603.875" y="225" width="32" height="32"/>
  </objectgroup>
  <layer id="8" name="enemy" width="20" height="10">
   <properties>

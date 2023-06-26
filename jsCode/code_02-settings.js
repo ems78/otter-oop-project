@@ -190,9 +190,8 @@ function setupLab1() {
     keyIcon.visible = true;
   }
 
-  Postavke.pointer.locked = true;
-
   const p2 = new Pointer(GAME.getSpriteLayer("p2"));
+  p2.locked = true;
   GAME.addSprite(p2);
   Postavke.pointer2 = p2;
 

@@ -559,7 +559,9 @@ class Pointer extends NonDestructable {
   }
 
   unlock(key) {
-    if (this.locked && key && key.visible) {
+    if (this.locked) {
+      if (key && key.visible) return true;
+      console.log("You need a key to open this door!");
       return false;
     } return true;
   }

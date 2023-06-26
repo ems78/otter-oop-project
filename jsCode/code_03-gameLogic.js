@@ -224,8 +224,8 @@ function handleUnlockingDoor() {
 function handlePointerInteraction(pointer) {
   if (!Postavke.owlet.touching(pointer)) return;
   if (!Postavke.CooldownActive("KeyW", 1000)) return;
-  if (!Postavke.pointer.unlock(Postavke.key)) return;
-  
+  if (!pointer.unlock(Postavke.keyIcon)) return;
+
   let nextMapName = pointer.nextMap();
   console.log(`Učitana je sljedeća mapa: ${nextMapName}`); // debugging
 

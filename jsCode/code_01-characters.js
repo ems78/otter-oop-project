@@ -545,6 +545,7 @@ class Pointer extends NonDestructable {
   constructor(layer) {
     super(layer);
 
+    this.locked = false;
     this.visible = true;
   }
 
@@ -554,6 +555,12 @@ class Pointer extends NonDestructable {
    */
   nextMap() {
     return Postavke.linkedMaps[GAME.activeWorldMap.name] || "Ne postoji";
+  }
+
+  unlock(key) {
+    if (this.locked && key && key.visible) {
+      return false;
+    } return true;
   }
 
 }

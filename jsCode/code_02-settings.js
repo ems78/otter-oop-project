@@ -51,7 +51,7 @@ function setup() {
       throw "Ne postoji setup za " + GAME.activeWorldMap.name;
   }
 
-  setupOwlet(); // uvik na kraju
+  setupOwlet(); // uvik na kraju radi poretka slojeva
   render_main();
 }
 
@@ -175,11 +175,13 @@ function setupLab1() {
   GAME.addSprite(b);
   Postavke.boxes.push(b);
 
-  if (Postavke.keyIcon) {
+  if (Postavke.keyIcon && Postavke.keyIcon.visible) {
     const keyIcon = new Key(GAME.getSpriteLayer("keyIcon"));
     GAME.addSprite(keyIcon);
     Postavke.keyIcon = keyIcon;
     keyIcon.visible = true;
   }
+
+  Postavke.pointer.locked = true;
 
 }

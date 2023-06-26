@@ -62,7 +62,7 @@ class Postavke {
     static CooldownActive(type, time) {
 
         const oldTime = this.typeOfCooldown[type];
-        if (!oldTime) return false; // ako nije ispravno
+        if (!oldTime) return false;
 
         const currentTime = new Date();
         if (currentTime - oldTime > time) {

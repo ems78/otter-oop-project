@@ -150,7 +150,7 @@ function handleAttackOnBox(hiddenItems) {
     let containsHiddenItems = Postavke.owlet.attack(b);
     console.log(b.durability);
 
-    if (arguments.length == 1 && containsHiddenItems) {
+    if (arguments.length === 1 && containsHiddenItems) {
       for (let i of hiddenItems) {
         i.visible = true;
       }
@@ -196,17 +196,24 @@ function handleAttackOnEnemy() {
 }
 
 
+function handleUnlockingDoor() {
+  if (Postavke.keyIcon) return true;
+  return false;
+}
+
+
 /**
  * Upravlja interakcijom sa pointerom
  */
 function handlePointerInteraction() {
   if (!Postavke.owlet.touching(Postavke.pointer)) return;
   if (!Postavke.CooldownActive("KeyW", 1000)) return;
+  if (!Postavke.pointer.unlock(Postavke.key)) return;
   
   let nextMapName = Postavke.pointer.nextMap();
   console.log(`Učitana je sljedeća mapa: ${nextMapName}`); // debugging
 
-  if (nextMapName != "Ne postoji") {
+  if (nextMapName !== "Ne postoji") {
     GAME.setActiveWorldMap(Postavke.pointer.nextMap());
     setup();
   }

@@ -29,6 +29,9 @@ class Postavke {
     /** @type {Pointer} */
     static pointer;
 
+    /** @type {Pointer} */
+    static pointer2;
+
     /** @type {PullSwitch} */
     static pullSwitch;
 
@@ -43,7 +46,9 @@ class Postavke {
         forrest: "cave_entrance",
         cave_entrance: "cave1",
         cave1: "lab1",
-        lab1: "lab2"
+        lab1: "hills",
+        lab1locked: "lab2",
+        lab2: "hills"
     };
 
     /** @type {Date} */

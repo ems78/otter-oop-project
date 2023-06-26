@@ -184,6 +184,18 @@
                  "width":32,
                  "x":0.625,
                  "y":0.625
+                }, 
+                {
+                 "class":"",
+                 "gid":282,
+                 "height":32,
+                 "id":8,
+                 "name":"p2",
+                 "rotation":0,
+                 "visible":true,
+                 "width":32,
+                 "x":603.875,
+                 "y":225
                 }],
          "opacity":1,
          "properties":[
@@ -252,7 +264,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":8,
+ "nextobjectid":9,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.2",
@@ -370,6 +382,21 @@
          "objectalignment":"topleft",
          "spacing":0,
          "tilecount":24,
+         "tileheight":32,
+         "tilewidth":32,
+         "transparentcolor":"#000000"
+        }, 
+        {
+         "columns":4,
+         "firstgid":279,
+         "image":"maps\/resources\/tilesets\/items\/pointers.png",
+         "imageheight":64,
+         "imagewidth":128,
+         "margin":0,
+         "name":"pointers",
+         "objectalignment":"topleft",
+         "spacing":0,
+         "tilecount":8,
          "tileheight":32,
          "tilewidth":32,
          "transparentcolor":"#000000"

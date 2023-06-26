@@ -192,6 +192,10 @@ function setupLab1() {
 
   Postavke.pointer.locked = true;
 
+  const p2 = new Pointer(GAME.getSpriteLayer("p2"));
+  GAME.addSprite(p2);
+  Postavke.pointer2 = p2;
+
 }
 
 
@@ -222,5 +226,5 @@ function setupHills() {
   const c1 = new KyberCrystal(GAME.getSpriteLayer("c1"));
   GAME.addSprite(c1);
   Postavke.kyberCrystals.push(c1);
-  
+
 }

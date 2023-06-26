@@ -61,7 +61,7 @@ function commonBehaviour() {
   }
 
   if(SENSING.keyW.active) {
-    handlePointerInteraction();
+    handlePointerInteraction(Postavke.pointer);
     HandleInfoInteraction();
   }
 
@@ -102,6 +102,10 @@ function lab1Behaviour() {
   if (SENSING.space.active) {  
     handleAttackOnEnemy();
     handleAttackOnVial();
+  }
+
+  if(SENSING.keyW.active) {
+    handlePointerInteraction(Postavke.pointer2);
   }
 }
 
@@ -217,16 +221,16 @@ function handleUnlockingDoor() {
 /**
  * Upravlja interakcijom sa pointerom
  */
-function handlePointerInteraction() {
-  if (!Postavke.owlet.touching(Postavke.pointer)) return;
+function handlePointerInteraction(pointer) {
+  if (!Postavke.owlet.touching(pointer)) return;
   if (!Postavke.CooldownActive("KeyW", 1000)) return;
   if (!Postavke.pointer.unlock(Postavke.key)) return;
   
-  let nextMapName = Postavke.pointer.nextMap();
+  let nextMapName = pointer.nextMap();
   console.log(`Učitana je sljedeća mapa: ${nextMapName}`); // debugging
 
   if (nextMapName !== "Ne postoji") {
-    GAME.setActiveWorldMap(Postavke.pointer.nextMap());
+    GAME.setActiveWorldMap(pointer.nextMap());
     setup();
   }
 };

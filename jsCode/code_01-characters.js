@@ -554,7 +554,8 @@ class Pointer extends NonDestructable {
    * @returns {string} ime sljedeće mape
    */
   nextMap() {
-    return Postavke.linkedMaps[GAME.activeWorldMap.name] || "Ne postoji";
+    const map = this.locked ? `${GAME.activeWorldMap.name}locked` : GAME.activeWorldMap.name;
+    return Postavke.linkedMaps[map] || "Ne postoji";
   }
 
   unlock(key) {

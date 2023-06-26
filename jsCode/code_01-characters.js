@@ -497,7 +497,7 @@ class Vial extends Destructable {
  */
 class Box extends Destructable {
   constructor(layer, dur) {
-    super(layer, dur); // dur ce bit random generirani broj pri inicijalizaciji
+    super(layer, dur); 
   }
 
 }
@@ -506,35 +506,36 @@ class Box extends Destructable {
 /**
  * Klasa: RuneStone
  * - predstavlja objekt koji inflikta status efekte
+ * - potencijalna funkcionalnost
  */
-class RuneStone extends NonDestructable {
-  #statusEffect;
-  #used;
-  constructor(layer, statEff) {
-    super(layer);
+// class RuneStone extends NonDestructable {
+//   #statusEffect;
+//   #used;
+//   constructor(layer, statEff) {
+//     super(layer);
 
-    this.#statusEffect = statEff;
-    this.#used = false; 
-    this.visible = true;
-  }
+//     this.#statusEffect = statEff;
+//     this.#used = false; 
+//     this.visible = true;
+//   }
 
-  get statusEffect() {
-    return this.#statusEffect;
-  }
+//   get statusEffect() {
+//     return this.#statusEffect;
+//   }
 
-  set statusEffect(effect) {
-    // postavit samo ako je dozvoljeno stanje (enum u statickoj?)
-  }
+//   set statusEffect(effect) {
+//     // postavit samo ako je dozvoljeno stanje (enum u statickoj?)
+//   }
 
-  get used() {
-    return this.#used;
-  }
+//   get used() {
+//     return this.#used;
+//   }
 
-  set used(v) {    
-    this.#used = true; 
-  }                   
+//   set used(v) {    
+//     this.#used = true; 
+//   }                   
   
-}
+// }
 
 
 /**
@@ -573,7 +574,7 @@ class Pointer extends NonDestructable {
  * Klasa infoPointer
  * - ispisuje upute za igranje
  */
-class infoPointer extends NonDestructable {
+class InfoPointer extends NonDestructable {
   #infoText;
   constructor(infoTxt, layer) {
     super(layer);

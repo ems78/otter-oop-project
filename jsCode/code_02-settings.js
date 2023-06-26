@@ -100,18 +100,18 @@ function setupForrest() {
   GAME.addSprite(c1);
   Postavke.kyberCrystals.push(c1);
 
-  const iP1 = new infoPointer(`\nPress LEFT/RIGHT arrows to move.\nPress UP arrow to jump.
+  const iP1 = new InfoPointer(`\nPress LEFT/RIGHT arrows to move.\nPress UP arrow to jump.
   \nPress W to interact with pointers.\nSome pointers will give instructions
   and some will load the next map.`, GAME.getSpriteLayer("info1"));
   GAME.addSprite(iP1);
   Postavke.infoPointers.push(iP1);
 
-  const iP2 = new infoPointer(`\nYour mission is to collect at least 8 mushrooms and 2 kyber crystals!
+  const iP2 = new InfoPointer(`\nYour mission is to collect at least 8 mushrooms and 2 kyber crystals!
   \nFind and destroy all vials!`, GAME.getSpriteLayer("info2"));
   GAME.addSprite(iP2);
   Postavke.infoPointers.push(iP2);
 
-  const iP3 = new infoPointer(`\nPress SPACE to attack enemies, destroy boxes and vials.
+  const iP3 = new InfoPointer(`\nPress SPACE to attack enemies, destroy boxes and vials.
   \nPress and hold A to heal.`, GAME.getSpriteLayer("info3"));
   GAME.addSprite(iP3);
   Postavke.infoPointers.push(iP3);

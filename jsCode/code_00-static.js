@@ -17,7 +17,7 @@ class Postavke {
     /** @type {Box} */
     static boxes = [];
 
-    /** @type {infoPointer} */
+    /** @type {InfoPointer} */
     static infoPointers = [];
 
     /** @type {Jedi} */
@@ -96,20 +96,24 @@ class Postavke {
     static gameOver() {
         btnStop_click();
         console.log("_________ GAME OVER _________");
-        let mission = "Mission successful!";
+
+        if (this.owlet.vialsDestroyed === this.goals["vials"] 
+        && this.owlet.crystalCount >= this.goals["crystals"] 
+        && this.owlet.mushroomCount >= this.goals["mushrooms"]) {
+            GameSettings.colorLog(this.gameOverSuccess.desc, "success");
+            return;
+        }
+
+        GameSettings.colorLog(this.gameOverFail.desc, "error");
         if (this.owlet.vialsDestroyed != this.goals["vials"]) {
-            console.log("You didn't destroy all the vials...");
-            mission = "Mission failed";
+            GameSettings.colorLog(this.gameOverFail.details.vials, "warning");
         }
         if (this.owlet.crystalCount < this.goals["crystals"]) {
-            console.log("You didn't collect enough crystals...");
-            mission = "Mission failed";
+            GameSettings.colorLog(this.gameOverFail.details.crystals, "warning");
         }
         if (this.owlet.mushroomCount < this.goals["mushrooms"]) {
-            console.log("You didn't collect enough mushrooms...");
-            mission = "Mission failed";
+            GameSettings.colorLog(this.gameOverFail.details.mushrooms, "warning");
         }
-        console.log(mission);
     }
 
 
@@ -117,5 +121,18 @@ class Postavke {
         crystals: 5,
         mushrooms: 8,
         vials: 5
-    };
+    }
+
+    static gameOverSuccess = {
+        desc: "Mission successful"
+    }
+
+    static gameOverFail = {
+        desc: "Mission failed",
+        details: {
+            vials: " * You didn't destroy all the vials...",
+            crystals: " * You didn't collect enough crystals...",
+            mushrooms: " * You didn't collect enough mushrooms..."
+        }
+    }
 }

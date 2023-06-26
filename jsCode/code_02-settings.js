@@ -47,6 +47,10 @@ function setup() {
       setupLab1();
       break;
 
+    case "lab2":
+      setupLab2();
+      break;
+
     default:
       throw "Ne postoji setup za " + GAME.activeWorldMap.name;
   }
@@ -184,4 +188,26 @@ function setupLab1() {
 
   Postavke.pointer.locked = true;
 
+}
+
+
+function setupLab2() {
+
+  const v1 = new Vial(GAME.getSpriteLayer("v1"));
+  const v2 = new Vial(GAME.getSpriteLayer("v2"));
+  GAME.addSprite(v1);
+  GAME.addSprite(v2);
+  Postavke.vials.push(v1);
+  Postavke.vials.push(v2);
+
+  const g1 = new Mushroom(GAME.getSpriteLayer("g1"));
+  const g2 = new Mushroom(GAME.getSpriteLayer("g2"));
+  const g3 = new Mushroom(GAME.getSpriteLayer("g3"));
+  GAME.addSprite(g1);
+  GAME.addSprite(g2);
+  GAME.addSprite(g3);
+  Postavke.mushrooms.push(g1);
+  Postavke.mushrooms.push(g2);
+  Postavke.mushrooms.push(g3);
+  
 }

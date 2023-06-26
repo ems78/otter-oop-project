@@ -9,7 +9,7 @@ The game is set beneath the surface of the planet Naboo, in the region of the Ea
 
 Luke Skywalker and his Ewok friend Tokkat arrived on the planet in search of Kyber crystals and special mushrooms that grow on Naboo. They split up to cover more ground, and little Tokkat stumbled upon a suspicious pair of guards, sensing that something mysterious is happening in a nearby cave. To his surprise, the cave turns out to be one of the entrances to the secret laboratory. As he delves deeper, he realizes that something very sinister is unfolding in that lab, and he must stop it at all costs.
 
-The main goal of programming this game was to learn and practice object-oriented programming concepts for OOP class in my university. The game was made using Otter workspace provided by my professors and it's a fun project that allowed me to explore OOP in action while creating something entertaining.
+The main goal of programming this game was to learn and practice object-oriented programming concepts for OOP class at my university. The game was made using Otter workspace provided by my professors and it's a fun project that allowed me to explore OOP in action while creating something entertaining.
 
 
 ## Table of Contents

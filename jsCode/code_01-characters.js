@@ -14,7 +14,6 @@
  */
 class Character extends Sprite {
   #healthPoints;
-  #damagePerHit;
   /**
    * 
    * @param {number} x 
@@ -40,7 +39,7 @@ class Character extends Sprite {
     this.visible = true;
 
     this.#healthPoints = 100;
-    this.#damagePerHit = 20;
+    this.damagePerHit = 20;
   }
 
   touching(sprite) {
@@ -80,10 +79,6 @@ class Character extends Sprite {
       console.log(" - death - \n");  // debugging
       this.visible = false;
     }
-  }
-
-  get damagePerHit() {
-    return this.#damagePerHit;
   }
 
   jump(h = 28) {  

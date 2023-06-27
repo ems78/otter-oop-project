@@ -38,7 +38,6 @@ class Character extends Sprite {
 
     this.layer = layer;
     this.visible = true;
-    // this.okvir = true;
 
     this.#healthPoints = 100;
     this.#damagePerHit = 20;
@@ -85,11 +84,6 @@ class Character extends Sprite {
 
   get damagePerHit() {
     return this.#damagePerHit;
-  }
-
-  // samo status efekti mogu mijenjati dph (RuneStone)
-  set damagePerHit(statusEffect) {
-    // TODO
   }
 
   jump(h = 28) {  
@@ -338,13 +332,17 @@ class Jedi extends Character {
 
 
 /**
- * Klasa: Collectable
+ * Apstraktna klasa: Collectable
  * - predstavlja predmet koji se može skupiti
  */
 class Collectable extends Item {
   constructor(layer) {
     super(layer);
     this.visible = true;
+
+    if (this.constructor === Collectable) {
+      throw new Error('Apstraktna klasa');
+    }
   }
 
   updatePosition() { }  // fiksne pozicije
@@ -361,12 +359,16 @@ class Collectable extends Item {
 
 
 /**
- * Klasa: NonCollectable
+ * Apstraktna klasa: NonCollectable
  * - predstavlja predmet koji se ne može skupiti
  */
 class NonCollectable extends Item {
   constructor(layer) {
     super(layer);
+
+    if (this.constructor === NonCollectable) {
+      throw new Error('Apstraktna klasa');
+    }
   }
 
   updatePosition() {};
@@ -425,7 +427,7 @@ class Key extends Collectable {
 
 
 /**
- * Klasa: Destructable
+ * Apstraktna klasa: Destructable
  * - predstavlja predmet koji se može uništiti
  */
 class Destructable extends NonCollectable {
@@ -439,6 +441,10 @@ class Destructable extends NonCollectable {
     super(layer);
     this.#durability = dur;
     this.visible = true;
+
+    if (this.constructor === Destructable) {
+      throw new Error('Apstraktna klasa');
+    }
   }
 
   get durability() {
@@ -467,14 +473,16 @@ class Destructable extends NonCollectable {
 
 
 /**
- * Klasa: NonDestructable
+ * Apstraktna klasa: NonDestructable
  * - predstavlja predmet koji se ne može uništiti
  */
 class NonDestructable extends NonCollectable {
   constructor(layer) {
     super(layer);
 
-    // this.visible = true;
+    if (this.constructor === NonDestructable) {
+      throw new Error('Apstraktna klasa');
+    }
   }
 }
 
@@ -615,6 +623,7 @@ class PullSwitch extends NonDestructable {
   set pulled(v) {
     this.#pulled = true;
   }
+
 
   /**
    * 
